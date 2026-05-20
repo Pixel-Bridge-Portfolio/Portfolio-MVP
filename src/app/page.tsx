@@ -8,16 +8,17 @@ export default function Home() {
     <Box sx={{ backgroundColor: "background.default" }}>
       <Section>
         <Stack spacing={4}>
-          <Typography variant="h1">We bridge code and creativity.</Typography>
+          <Typography variant="h1">We build digital products that people remember.</Typography>
           <Typography variant="body1" className="text-muted" sx={{ maxWidth: 760 }}>
-            Pixel Bridge is a multidisciplinary team portfolio MVP built with
-            Next.js and MUI. This starter setup includes the global design
-            system and reusable UI primitives for the upcoming page tasks.
+            Pixel Bridge is a multidisciplinary team of engineers, designers,
+            and strategists. We combine strong technical execution with clear
+            creative direction to deliver websites, brand experiences, and
+            product solutions that perform.
           </Typography>
           <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             <PrimaryButton href="/work">View Our Work</PrimaryButton>
             <PrimaryButton variant="outlined" href="/contact">
-              Let&apos;s Talk
+              Start a Project
             </PrimaryButton>
           </Stack>
           <Stack
@@ -26,18 +27,19 @@ export default function Home() {
             useFlexGap
             sx={{ flexWrap: "wrap" }}
           >
-            <SurfaceCard sx={{ minWidth: 220 }}>
-              <Typography variant="h3">9 Disciplines</Typography>
+            <SurfaceCard sx={{ minWidth: 260 }}>
+              <Typography variant="h3">What We Do</Typography>
               <Typography variant="body1" className="text-muted">
-                Backend, Frontend, Design, Branding, Video, Comms, Social,
-                AI, and Product Design.
+                Backend, frontend, branding, visual content, social media,
+                AI workflows, and product design in one connected team.
               </Typography>
             </SurfaceCard>
-            <SurfaceCard sx={{ minWidth: 220 }}>
-              <Typography variant="h3">Reusable UI Base</Typography>
+            <SurfaceCard sx={{ minWidth: 260 }}>
+              <Typography variant="h3">How We Work</Typography>
               <Typography variant="body1" className="text-muted">
-                Shared section, button, and card components are ready for all
-                feature teams.
+                We run a practical process from discovery to delivery with
+                clear communication, short feedback loops, and measurable
+                outcomes.
               </Typography>
             </SurfaceCard>
           </Stack>
