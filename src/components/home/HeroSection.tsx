@@ -103,7 +103,7 @@ export default function HeroSection() {
                 },
               }}
             >
-              Contact Me
+              Contact Us
             </Button>
           </Stack>
         </Stack>

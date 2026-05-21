@@ -1,0 +1,222 @@
+PIXEL BRIDGE — TEAM PORTFOLIO STRUCTURAL PLAN
+
+SITE ARCHITECTURE — 8 MAIN PAGES
+
+PAGE 1 ─ HOME (Landing) 
+
+ Purpose: Goal: Instant impact. Show the team as a unified 
+ creative-tech force. 
+Sections: 
+1.1 Hero Section 
+• Full-viewport canvas with animated pixel
+grid background (WebGL or CSS) │
+• Headline: e.g. "We bridge code & creativity." 
+• Sub-headline: tagline of the 9 skill domains
+• CTA buttons: "View Our Work" / "Let's Talk" 
+1.2 Skill Carousel (Service) Carousel 
+• Horizontal scrolling strip or slider 
+• Each skill as a "bridge pillar" card:
+ Icon + Name + one-liner
+• Skills in order: 
+Backend · Frontend · Graphic Design ·
+Branding · Video · Comms · Social Media · 
+AI · Product Design 
+• Hover reveals a subtle glow / glitch effect
+1.3 Stats / Trust Bar
+• "50+ Projects Delivered · 9 Disciplines ·
+3+ Years · 20+ Clients" for [JUST A EXAPLE]
+1.4 Featured Work (Grid) 
+• 3–4 eye-catching project thumbnails
+• Each links to portfolio detail
+1.5 Footer (same on all pages) — see Page 8
+
+PAGE 2 ─ ABOUT US 
+
+Goal: Tell the story behind the Pixel Bridge team.
+
+Sections:
+ 2.1 Mission Statement
+• "We are a multidisciplinary collective of designers, engineers, 
+and strategists building bridges between│
+imagination and execution." 
+
+ 2.2 Timeline / Journey 
+ • Horizontal timeline showing milestones 
+(founded, first project, expanded skills…) 
+
+2.3 Core Values
+ • 3–4 pillars: Craft · Code · Connect · Create 
+• Each with a short description & icon 
+
+ 2.4 The Bridge Philosophy 
+• Visual: two land masses connected by a
+pixelated bridge 
+ • Text: How the team connects disciplines 
+
+PAGE 3 ─ SERVICES (The 9 Skills)
+
+Goal: Detail every skill the team offers. 
+
+Sections: 
+ 3.1 Skill Grid (3×3)
+• One card per skill, arranged 3 columns: 
+
+Backend │ Frontend │ Graphic │ │
+│ │ Dev │ Dev │ Design │ │
+
+Branding │ Video │ Communi- 
+│ │ Design │ Editing │ cations 
+
+│ │ Social │ Artifi- │ Product 
+│ │ Media Mgmt│ cial Intel│ Design 
+
+│ 3.2 Each Card Contains: 
+│ • Custom icon (SVG) 
+│ • Skill name 
+│ • Short description (2–3 lines) 
+│ • Example deliverable badge (e.g. "APIs", 
+│ "Landing Pages", "Logos", "Reels", etc.) 
+│ • Hover: glassmorphism reveal with CTA 
+│ "See Project Examples" → links to portfolio 
+│ filtered by that skill 
+
+│ 3.3 Optional: Process Section 
+│ • How the team works end-to-end (discovery → 
+│ design → develop → deliver) 
+
+│ PAGE 4 ─ PORTFOLIO / WORK 
+
+│ Goal: Show real projects that demonstrate the 
+│ team's cross-disciplinary range. 
+│
+│ Sections: 
+│ 4.1 Filter Bar 
+│ • Category filters: All · Backend · Frontend · Design · 
+│ Branding · Video · Comms · Social · AI · 
+│ Product 
+│ • Active filter highlights with underline glow 
+│
+│ 4.2 Masonry Project Grid 
+│ • Mixed aspect ratios for visual rhythm 
+│ • Each project card: 
+│ - Thumbnail (with overlay on hover) 
+│ - Project title 
+│ - Skills used (tags) 
+│ - "View Case Study" link 
+│ 
+│ 4.3 Project Detail (Modal or Separate View) 
+│ • Hero image/video 
+│ • Client name + industry 
+│ • Problem → Solution → Result 
+│ • Gallery (images, videos, mockups) 
+│ • Tech / tools used 
+│ • Testimonial snippet 
+│ • "Next Project" navigation 
+
+
+│ PAGE 5 ─ TEAM 
+
+│ Goal: Humanise the brand. Introduce the people 
+│ behind Pixel Bridge. 
+
+│ Sections: 
+│ 5.1 Team Grid 
+│ • Profile cards with photo, name, role 
+│ • Skill badges under each name 
+│ • Hover: "Say Hi" tooltip → contact form prefilled
+│
+│ 5.2 Individual Modal (click to expand) 
+│ • Larger photo 
+│ • Bio paragraph 
+│ • Social links (GitHub/Portfolio links 
+│ • "Let’s work together" CTA
+│ 
+│ 5.3 Join Us CTA (optional) │
+│
+│ • "We're growing — check open roles" 
+
+
+│ PAGE 6 ─ TESTIMONIALS │
+│ Goal: Build trust through social proof. 
+│ 
+│ Sections: 
+│ 6.1 Carousel / Slider 
+│ • Auto-rotating client quotes 
+│ • Client photo, name, company 
+│ • Star rating (if applicable) 
+│ • Project link (optional) 
+│ │
+│ 6.2 Logo Wall 
+│ • Client / partner logos in a grid 
+│ • Grayscale → full colour on hover 
+│ 
+│ 6.3 Video Testimonials (if available) 
+│ • Embedded short clips 
+
+
+│ PAGE 7 ─ BLOG / INSIGHTS
+
+│ Goal: Show thought leadership, case studies, and 
+│ behind-the-scenes content. 
+│ 
+│ Sections: 
+│ 7.1 Featured Article (hero card) 
+│ • Large card with cover image 
+│ • Title, excerpt, read time, date 
+│ 
+│ 7.2 Article Grid 
+│ • Standard blog layout (2 column list 
+│ • Category tags (Design, Dev, AI, etc.) 
+│ • "Read More →" 
+│ 
+│ 7.3 Newsletter Signup (sticky or inline) 
+│ • "Get insights delivered to your inbox" 
+
+
+│ PAGE 8 ─ CONTACT + GLOBAL FOOTER 
+
+│ Goal: Make it easy to reach the team. 
+│
+│ Sections: 
+│ 8.1 Contact Form 
+│ • Fields: Name · Email · Service Needed · 
+│ Budget · Message 
+│ • File upload (brief attachment) 
+│ • Submit with animated button 
+│ 
+│ 8.2 Alternative Contact Info 
+│ • Email: hello@pixelbridge.studio 
+│ • Social media icons 
+│ • Location (if applicable) 
+│ │
+│ 8.3 Footer (Global) 
+│ • Logo + tagline 
+│ • Quick nav links (Home, Services, Portfolio, 
+│ Team, Blog, Contact) 
+│ • 9 skill mini-badges (text links) 
+│ • Social icons 
+│ • Copyright + "Built with ❤️ by Pixel Bridge" Pixel Bridge"
+
+============================================================
+UI/UX DESIGN NOTES (PIXEL BRIDGE THEME)
+1.	NAVIGATION
+• Fixed-top navbar with glassmorphism (backdrop-filter: blur)
+• Logo on left: "Pixel Bridge" with a small bridge icon
+• Menu on right: Home · About · Services · Work · Team · Blog · Contact
+• On scroll → background becomes solidifies (scrim effect)
+2.	ANIMATIONS (subtle, performant)
+• Page transitions: fade-slide-up
+• Cards: scale on hover • Skill cards: tilt 3D effect on mouse m
+• Scroll-triggered: number counters, reveal-in-viewport
+• Hero: floating pixel particles (canvas animation)
+3.	MICRO-INTERACTIONS
+• Custom cursor (optional) with glow trail
+• Button hover: gradient shift + slight scale
+• Nav link hover: underline that animates left→right
+• Images: desaturated → colour on hover
+
+
+
+============================================================
+Somaiya Noori
+
