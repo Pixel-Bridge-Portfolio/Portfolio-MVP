@@ -1,15 +1,22 @@
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import { services } from "@/data/services";
 import SkillCard from "./SkillCard";
 
 export default function SkillGrid() {
   return (
-    <Grid container spacing={3}>
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 340px))",
+        justifyContent: "center",
+        gap: 3,
+      }}
+    >
       {services.map((skill) => (
-        <Grid key={skill.id} size={{ xs: 12, md: 6, lg: 4 }}>
+        <Box key={skill.id}>
           <SkillCard skill={skill} />
-        </Grid>
+        </Box>
       ))}
-    </Grid>
+    </Box>
   );
 }
