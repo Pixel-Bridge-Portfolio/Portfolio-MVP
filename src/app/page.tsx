@@ -2,13 +2,12 @@ import { Box, Stack, Typography } from "@mui/material";
 import PrimaryButton from "@/components/common/PrimaryButton";
 import Section from "@/components/common/Section";
 import SurfaceCard from "@/components/common/SurfaceCard";
-import ProcessSection from "@/components/services/ProcessSection";
 
 export default function Home() {
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
       <Section>
-        <Stack spacing={4}>
+        <Stack spacing={4} className="reveal">
           <Typography variant="h1" className="text-(--pb-black)">
             We build digital products that people remember.
           </Typography>
@@ -45,8 +44,6 @@ export default function Home() {
           </Stack>
         </Stack>
       </Section>
-
-      <ProcessSection />
     </Box>
   );
 }
