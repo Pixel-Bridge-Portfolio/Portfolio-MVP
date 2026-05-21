@@ -12,7 +12,7 @@ export default function AppShell({ children }: AppShellProps) {
     <div className="min-h-screen bg-neutral-950 text-white">
       <Navbar />
 
-      <main className="pt-20">{children}</main>
+      <main className="pt-16">{children}</main>
 
       <Footer />
     </div>

@@ -51,21 +51,21 @@ export default function Navbar() {
           ? "border-b border-white/10 bg-black/40 shadow-lg backdrop-blur-2xl"
           : "bg-white/5 backdrop-blur-md"
         }`}>
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-wide text-white">
-            <div className="flex  items-center h-14 w-14 justify-center">
-              <img src="/logo final.png" className="h-auto w-auto object-contain" />
+          <Link href="/" className="flex items-center gap-2 text-base font-semibold tracking-wide text-white">
+            <div className="flex items-center h-10 w-10 justify-center">
+              <img src="/logo final.png" className="h-full w-full object-contain" alt="Pixel Bridge logo" />
             </div>
-            <span className="text-xl font-bold tracking-wide text-white">Pixel Bridge</span>
+            <span className="text-lg font-semibold tracking-wide text-white">Pixel Bridge</span>
           </Link>
 
-          <nav className="hidden items-center gap-2 md:flex">
+          <nav className="hidden items-center gap-1.5 md:flex">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
 
               return (
-                <Link key={item.label} href={item.href} className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300
+                <Link key={item.label} href={item.href} className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-all duration-300
                   ${isActive ? "text-white" : "text-white/70 hover:text-white"}`}>
 
                   {item.label}
@@ -86,7 +86,7 @@ export default function Navbar() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileOpen(true)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 md:hidden"
           >
             <MenuIcon sx={{ fontSize: 20 }} />
           </button>
