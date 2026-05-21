@@ -8,7 +8,9 @@ export default function Home() {
     <Box sx={{ backgroundColor: "background.default" }}>
       <Section>
         <Stack spacing={4}>
-          <Typography variant="h1">We build digital products that people remember.</Typography>
+          <Typography variant="h1" className="text-(--pb-black)">
+            We build digital products that people remember.
+          </Typography>
           <Typography variant="body1" className="text-muted" sx={{ maxWidth: 760 }}>
             Pixel Bridge is a multidisciplinary team of engineers, designers,
             and strategists. We combine strong technical execution with clear
