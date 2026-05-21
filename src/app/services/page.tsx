@@ -1,13 +1,16 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import SkillGrid from "@/components/services/SkillGrid";
-import ProcessSection from "@/components/services/ProcessesSection";
+import ProcessSection from "@/components/services/ProcessSection";
 
 export default function ServicesPage() {
   return (
     <Box component="main" className="section-padding">
       <Container maxWidth="lg">
         <Stack spacing={5}>
-          <Stack spacing={1.5} sx={{ maxWidth: 760, mx: "auto", textAlign: "center" }}>
+          <Stack
+            spacing={1.5}
+            sx={{ maxWidth: 760, mx: "auto", textAlign: "center" }}
+          >
             <Typography variant="h2">Our Services</Typography>
             <Typography variant="body1" className="text-muted">
               We cover nine connected disciplines to move projects from idea to
@@ -17,8 +20,7 @@ export default function ServicesPage() {
           <SkillGrid />
         </Stack>
       </Container>
-      <ProcessSection/>
+      <ProcessSection />
     </Box>
-    
   );
 }
