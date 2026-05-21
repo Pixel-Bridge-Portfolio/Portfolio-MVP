@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -55,10 +54,10 @@ export default function Navbar() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
           <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-wide text-white">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-lg">
-              PB
+            <div className="flex  items-center h-14 w-14 justify-center">
+              <img src="/logo final.png" className="h-auto w-auto object-contain" />
             </div>
-            <span>Portfolio</span>
+            <span className="text-xl font-bold tracking-wide text-white">Pixel Bridge</span>
           </Link>
 
           <nav className="hidden items-center gap-2 md:flex">

@@ -40,11 +40,11 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-neutral-950 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.3fr_1fr_1fr] lg:px-8">
         <div>
-          <Link href="/" className="mb-5 flex items-center gap-3 text-2xl font-bold">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 backdrop-blur-md">
-              PB
+          <Link href="/" className="mb-5 flex items-center gap-3">
+            <div className="flex items-center h-18 w-18 justify-center">
+              <img src="/logo final.png" className="h-auto w-auto object-contain" />
             </div>
-            <span>Portfolio</span>
+            <span className="text-2xl font-bold">Pixel Bridge</span>
           </Link>
 
           <p className="max-w-md text-sm leading-7 text-white/60">
