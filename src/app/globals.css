@@ -1,25 +1,40 @@
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #171717;
 
+  /* Project Design Tokens */
   --pb-white: #ffffff;
   --pb-black: #111111;
   --pb-black-soft: #1f1f1f;
   --pb-muted: #4b5563;
   --pb-border: #e5e7eb;
+  --pb-card: #fafafa;
+
+  /* Spacing & Motion */
   --pb-section-space: clamp(3rem, 8vw, 6rem);
   --pb-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
   --pb-duration-fast: 160ms;
   --pb-duration-normal: 220ms;
   --pb-duration-section: 320ms;
+
+  /* Motion tuning */
   --pb-reveal-distance: 14px;
   --pb-hover-distance: -4px;
 }
 
-* {
-  box-sizing: border-box;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --pb-card: #141414;
+    --pb-border: #262626;
+    --pb-black: #ffffff;
+    --pb-white: #0a0a0a;
+  }
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
 }
@@ -28,27 +43,31 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--pb-white);
-  color: var(--pb-black);
 }
 
+/* Global Base */
 body {
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+/* Typography helpers */
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.section-padding {
-  padding-block: var(--pb-section-space);
 }
 
 .text-muted {
   color: var(--pb-muted);
 }
 
+/* Layout helpers */
+.section-padding {
+  padding-block: var(--pb-section-space);
+}
+
+/* Hover effects */
 .hover-lift {
   transition: transform var(--pb-duration-normal) var(--pb-ease-standard),
     box-shadow var(--pb-duration-normal) var(--pb-ease-standard);
@@ -59,6 +78,7 @@ a {
   box-shadow: 0 14px 24px rgba(17, 17, 17, 0.08);
 }
 
+/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(var(--pb-reveal-distance));
@@ -72,6 +92,7 @@ a {
   }
 }
 
+/* Nav underline */
 .nav-link-underline {
   position: relative;
 }
@@ -99,6 +120,7 @@ a {
   opacity: 1;
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -108,4 +130,20 @@ a {
     transition-duration: 1ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
 }
