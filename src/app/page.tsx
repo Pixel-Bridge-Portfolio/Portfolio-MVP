@@ -1,9 +1,10 @@
-import { Box, Stack, Typography } from "@mui/material";
-import PrimaryButton from "@/components/common/PrimaryButton";
-import Section from "@/components/common/Section";
-import SurfaceCard from "@/components/common/SurfaceCard";
 
-export default function Home() {
+import HeroSection from "@/components/home/HeroSection";
+import SkillCarousel from "@/components/home/SkillCarousel";
+import StatsBar from "@/components/home/StatsBar";
+import FeaturedWorkGrid from "@/components/home/FeaturedWorkGrid";
+
+export default function HomePage() {
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
       <Section>
