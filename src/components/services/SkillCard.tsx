@@ -1,41 +1,25 @@
 import Link from "next/link";
-import {
-  Box,
-  Card,
-  CardContent,
-  Chip,
-  Typography,
-  type SxProps,
-  type Theme,
-} from "@mui/material";
+import { Box, Card, CardContent, Chip, Typography } from "@mui/material";
+import type { ServiceItem } from "@/data/services";
 
-type Skill = {
-  id: number;
-  slug: string;
-  name: string;
-  description: string;
-  deliverable: string;
-  icon: React.ElementType;
-};
-
-const cardStyles: SxProps<Theme> = {
-  height: "100%",
-  borderRadius: 3,
-  transition: "transform 220ms ease, box-shadow 220ms ease",
-  "&:hover": {
-    transform: "translateY(-4px)",
-    boxShadow: "0 16px 28px rgba(17, 17, 17, 0.12)",
-  },
-};
-
-export default function SkillCard({ skill }: { skill: Skill }) {
+export default function SkillCard({ skill }: { skill: ServiceItem }) {
   const Icon = skill.icon;
 
   return (
-    <Card sx={cardStyles}>
+    <Card
+      sx={{
+        height: "100%",
+        borderRadius: 3,
+        transition: "transform 220ms ease, box-shadow 220ms ease",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          boxShadow: "0 16px 28px rgba(17, 17, 17, 0.12)",
+        },
+      }}
+    >
       <CardContent sx={{ p: 3 }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.25, mb: 1.25 }}>
-          <Icon style={{ color: "#111111" }} />
+          <Icon sx={{ color: "#111111" }} fontSize="small" />
           <Typography variant="h6">{skill.name}</Typography>
         </Box>
 
