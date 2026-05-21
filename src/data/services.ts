@@ -1,84 +1,84 @@
 import WebIcon from "@mui/icons-material/Web";
-import StorageIcon from "@mui/icons-material/Storage";
-import BrushIcon from "@mui/icons-material/Brush";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import CampaignIcon from "@mui/icons-material/Campaign";
-import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import CodeIcon from "@mui/icons-material/Code";
-import AnalyticsIcon from "@mui/icons-material/Analytics";
+import BrushIcon from "@mui/icons-material/Brush";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import ChatIcon from "@mui/icons-material/Chat";
+import ShareIcon from "@mui/icons-material/Share";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export const services = [
   {
     id: 1,
+    slug: "backend",
+    name: "Backend",
+    description: "API and server-side development.",
+    deliverable: "APIs",
+    icon: CodeIcon,
+  },
+  {
+    id: 2,
     slug: "frontend",
-    name: "Frontend Development",
-    description: "Modern responsive UI using React and Next.js.",
+    name: "Frontend",
+    description: "Modern UI development.",
     deliverable: "Landing Pages",
     icon: WebIcon,
   },
   {
-    id: 2,
-    slug: "backend",
-    name: "Backend Development",
-    description: "Secure and scalable APIs and server systems.",
-    deliverable: "APIs",
-    icon: StorageIcon,
-  },
-  {
     id: 3,
-    slug: "uiux",
-    name: "UI/UX Design",
-    description: "Clean and user-friendly interface design.",
-    deliverable: "Wireframes",
+    slug: "graphic-design",
+    name: "Graphic Design",
+    description: "Visual and creative design work.",
+    deliverable: "Designs",
     icon: BrushIcon,
   },
   {
     id: 4,
-    slug: "mobile",
-    name: "Mobile Apps",
-    description: "Cross-platform mobile applications.",
-    deliverable: "Apps",
-    icon: PhoneIphoneIcon,
-  },
-  {
-    id: 5,
-    slug: "marketing",
-    name: "Digital Marketing",
-    description: "Online marketing and ad campaigns.",
-    deliverable: "Campaigns",
+    slug: "branding",
+    name: "Branding",
+    description: "Brand identity and logo systems.",
+    deliverable: "Logos",
     icon: CampaignIcon,
   },
   {
-    id: 6,
+    id: 5,
     slug: "video",
-    name: "Video Editing",
-    description: "Short-form content and promotional videos.",
+    name: "Video",
+    description: "Video editing and motion content.",
     deliverable: "Reels",
-    icon: SmartDisplayIcon,
+    icon: VideoLibraryIcon,
+  },
+  {
+    id: 6,
+    slug: "communications",
+    name: "Communications",
+    description: "Messaging and content strategy.",
+    deliverable: "Content",
+    icon: ChatIcon,
   },
   {
     id: 7,
-    slug: "branding",
-    name: "Branding",
-    description: "Logos and brand identity systems.",
-    deliverable: "Logos",
-    icon: DesignServicesIcon,
+    slug: "social-media",
+    name: "Social Media",
+    description: "Social media management.",
+    deliverable: "Posts",
+    icon: ShareIcon,
   },
   {
     id: 8,
-    slug: "custom",
-    name: "Custom Software",
-    description: "Tailored software solutions.",
-    deliverable: "Systems",
-    icon: CodeIcon,
+    slug: "ai",
+    name: "AI",
+    description: "AI-powered solutions.",
+    deliverable: "Models",
+    icon: PsychologyIcon,
   },
   {
     id: 9,
-    slug: "analytics",
-    name: "Analytics",
-    description: "Data dashboards and insights.",
-    deliverable: "Reports",
-    icon: AnalyticsIcon,
+    slug: "product-design",
+    name: "Product Design",
+    description: "End-to-end product UI/UX.",
+    deliverable: "Prototypes",
+    icon: ShoppingCartIcon,
   },
 ];
