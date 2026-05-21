@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { Box, Chip, Container, IconButton, Stack, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -19,7 +19,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ borderTop: "1px solid rgba(255,255,255,0.12)", backgroundColor: "#111111", mt: 5 }}>
+    <Box component="footer" sx={{ borderTop: "1px solid rgba(255,255,255,0.12)", backgroundColor: "#111111", mt: 0 }}>
       <Container maxWidth="lg" sx={{ py: 4.5 }}>
         <Box
           sx={{
