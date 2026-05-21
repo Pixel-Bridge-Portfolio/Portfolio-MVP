@@ -1,85 +1,112 @@
-import Link from "next/link";
-
+﻿import Link from "next/link";
+import Image from "next/image";
+import { Box, Chip, Container, IconButton, Stack, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import EmailIcon from "@mui/icons-material/Email";
 
-const skills = ["Next.js", "React", "TypeScript", "Tailwind", "UI/UX", "Branding"];
+const skills = ["Backend", "Frontend", "Branding", "Video", "AI", "Product Design"];
 
 const socials = [
   { label: "X", href: "https://twitter.com", icon: XIcon },
   { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
   { label: "LinkedIn", href: "https://linkedin.com", icon: LinkedInIcon },
   { label: "GitHub", href: "https://github.com", icon: GitHubIcon },
-  { label: "Email", href: "mailto:hello@pixelbridge.dev", icon: EmailIcon },
+  { label: "Email", href: "mailto:hello@pixelbridge.studio", icon: EmailIcon },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-neutral-950 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div className="max-w-xl">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center">
-                <img src="/logo final.png" className="h-full w-full object-contain" alt="Pixel Bridge logo" />
-              </div>
-              <span className="text-lg font-semibold tracking-wide">Pixel Bridge</span>
+    <Box component="footer" sx={{ borderTop: "1px solid rgba(255,255,255,0.12)", backgroundColor: "#111111", mt: 5 }}>
+      <Container maxWidth="lg" sx={{ py: 4.5 }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", lg: "row" },
+            justifyContent: "space-between",
+            gap: 3,
+          }}
+        >
+          <Box sx={{ maxWidth: 560 }}>
+            <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+              <Image src="/logo final.png" alt="Pixel Bridge logo" width={36} height={36} />
+              <Typography sx={{ fontWeight: 700, fontSize: "1.05rem", color: "#ffffff" }}>
+                Pixel Bridge
+              </Typography>
             </Link>
+            <Typography sx={{ mt: 1.25, color: "#c7cdd4", lineHeight: 1.7, fontSize: "0.95rem" }}>
+              We build practical digital products with a cross-disciplinary team
+              that connects strategy, design, and engineering.
+            </Typography>
+          </Box>
 
-            <p className="mt-3 text-sm leading-6 text-white/60">
-              We craft modern digital experiences focused on performance, creativity, and scalable products.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start gap-4 lg:items-end">
-            <div className="flex flex-wrap gap-1.5 lg:justify-end">
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "flex-start", lg: "flex-end" },
+              gap: 1.5,
+            }}
+          >
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
               {skills.map((skill) => (
-                <span
+                <Chip
                   key={skill}
-                  className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/70"
-                >
-                  {skill}
-                </span>
+                  label={skill}
+                  size="small"
+                  sx={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", color: "#f9fafb" }}
+                />
               ))}
-            </div>
+            </Box>
 
-            <div className="flex items-center gap-2">
+            <Stack direction="row" spacing={1}>
               {socials.map((social) => {
                 const Icon = social.icon;
-
                 return (
-                  <a
+                  <IconButton
                     key={social.label}
+                    component="a"
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={social.label}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white hover:text-black"
+                    sx={{ border: "1px solid rgba(255,255,255,0.25)", color: "#e5e7eb" }}
                   >
-                    <Icon sx={{ fontSize: 15 }} />
-                  </a>
+                    <Icon sx={{ fontSize: 18 }} />
+                  </IconButton>
                 );
               })}
-            </div>
-          </div>
-        </div>
+            </Stack>
+          </Box>
+        </Box>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-4 text-xs text-white/50 sm:flex-row">
-          <p>&copy; 2026 Pixel Bridge. All rights reserved.</p>
-
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="transition hover:text-white">
+        <Box
+          sx={{
+            mt: 3,
+            pt: 2,
+            borderTop: "1px solid rgba(255,255,255,0.12)",
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            justifyContent: "space-between",
+            alignItems: { xs: "flex-start", sm: "center" },
+            gap: 1.5,
+          }}
+        >
+          <Typography sx={{ color: "#a6afbb", fontSize: "0.82rem" }}>
+            Copyright 2026 Pixel Bridge. Built by the Pixel Bridge team.
+          </Typography>
+          <Box sx={{ display: "flex", gap: 2 }}>
+            <Link href="/privacy" style={{ color: "#cfd6de", fontSize: "0.82rem" }}>
               Privacy
             </Link>
-            <Link href="/terms" className="transition hover:text-white">
+            <Link href="/terms" style={{ color: "#cfd6de", fontSize: "0.82rem" }}>
               Terms
             </Link>
-          </div>
-        </div>
-      </div>
-    </footer>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 }

@@ -1,18 +1,20 @@
 import Link from "next/link";
 import { Box, Card, CardContent, Chip, Typography } from "@mui/material";
 import type { ServiceItem } from "@/data/services";
+import { motionTokens, motionTransition } from "@/lib/animations";
 
 export default function SkillCard({ skill }: { skill: ServiceItem }) {
   const Icon = skill.icon;
 
   return (
     <Card
+      className="hover-lift"
       sx={{
         height: "100%",
         borderRadius: 3,
-        transition: "transform 220ms ease, box-shadow 220ms ease",
+        transition: motionTransition.card,
         "&:hover": {
-          transform: "translateY(-4px)",
+          transform: `translateY(-${motionTokens.distance.hoverY}px)`,
           boxShadow: "0 16px 28px rgba(17, 17, 17, 0.12)",
         },
       }}
