@@ -7,7 +7,7 @@ export type TimelineItem = {
 export type CoreValue = {
   title: string;
   description: string;
-  icon: string;
+  label: string;
 };
 
 export const mission = {
@@ -47,22 +47,22 @@ export const coreValues: CoreValue[] = [
   {
     title: "Craft",
     description: "Attention to detail and thoughtful execution in every experience.",
-    icon: "🎨",
+    label: "CR",
   },
   {
     title: "Code",
     description: "Clean, scalable, and maintainable engineering practices.",
-    icon: "💻",
+    label: "CD",
   },
   {
     title: "Connect",
     description: "Building meaningful relationships between people and products.",
-    icon: "🤝",
+    label: "CN",
   },
   {
     title: "Create",
     description: "Turning ideas into impactful digital experiences.",
-    icon: "✨",
+    label: "CT",
   },
 ];
 

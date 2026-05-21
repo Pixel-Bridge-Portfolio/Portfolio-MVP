@@ -1,76 +1,48 @@
-"use client";
-
 import { timeline } from "@/data/about";
-import { useRef, useEffect } from "react";
+import { Box, Chip, Paper, Stack, Typography } from "@mui/material";
 
 export default function JourneyTimeline() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-up");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const cards = document.querySelectorAll(".timeline-card");
-    cards.forEach((card) => observer.observe(card));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-24 bg-neutral-50 dark:bg-neutral-900/30">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-neutral-500 mb-3">
-            Our Journey
-          </p>
-          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white md:text-4xl lg:text-5xl">
-            Milestones Along The Way
-          </h2>
-          <div className="w-20 h-0.5 bg-neutral-300 dark:bg-neutral-700 mx-auto mt-6" />
-        </div>
+    <Paper elevation={0} className="reveal" sx={{ p: { xs: 3, md: 5 }, borderRadius: 4, border: "1px solid", borderColor: "divider" }}>
+      <Stack spacing={1.5} sx={{ mb: 4, textAlign: "center" }}>
+        <Box><Chip label="OUR JOURNEY" size="small" variant="outlined" /></Box>
+        <Typography variant="h3">Milestones Along The Way</Typography>
+      </Stack>
 
-چ        <div className="relative">
-          <div className="absolute top-20 left-0 right-0 h-0.5 bg-neutral-200 dark:bg-neutral-800 hidden md:block" />
-
-          <div className="flex flex-col gap-8 md:flex-row md:gap-6 relative">
-            {timeline.map((item, index) => (
-              <div
-                key={item.year}
-                className="timeline-card flex-1 opacity-0"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Year Circle */}
-                <div className="relative flex justify-center mb-8">
-                  <div className="w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border-2 border-neutral-400 dark:border-neutral-600 flex items-center justify-center shadow-md z-10">
-                    <span className="text-sm font-bold text-neutral-700 dark:text-neutral-300">
-                      {item.year}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Card Content */}
-                <div className="group relative bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-100 dark:border-neutral-800">
-                  <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", lg: "repeat(4, 1fr)" },
+          gap: 2,
+        }}
+      >
+        {timeline.map((item) => (
+          <Paper
+            key={`${item.year}-${item.title}`}
+            elevation={0}
+            sx={{ p: 2.5, borderRadius: 3, border: "1px solid", borderColor: "divider", bgcolor: "background.default" }}
+          >
+            <Box
+              sx={{
+                width: 48,
+                height: 48,
+                borderRadius: "999px",
+                border: "2px solid",
+                borderColor: "divider",
+                display: "grid",
+                placeItems: "center",
+                mb: 1.5,
+                fontSize: "0.72rem",
+                fontWeight: 700,
+              }}
+            >
+              {item.year}
+            </Box>
+            <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
+            <Typography className="text-muted" sx={{ fontSize: "0.95rem", lineHeight: 1.7 }}>{item.description}</Typography>
+          </Paper>
+        ))}
+      </Box>
+    </Paper>
   );
 }
