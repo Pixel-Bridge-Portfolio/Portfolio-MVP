@@ -14,16 +14,16 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   background: var(--pb-white);
   color: var(--pb-black);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -50,35 +50,4 @@ a {
 .hover-lift:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 24px rgba(17, 17, 17, 0.08);
-}
-
-.nav-link {
-  position: relative;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.MuiPaper-root {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
-  }
 }
