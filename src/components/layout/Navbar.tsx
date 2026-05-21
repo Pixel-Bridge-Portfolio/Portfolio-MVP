@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import MenuIcon from '@mui/icons-material/Menu';
-
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import DesignServicesOutlinedIcon from "@mui/icons-material/DesignServicesOutlined";
@@ -12,8 +13,8 @@ import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
-
-import MobileMenu from "../layout/MobileMenu";
+import MobileMenu from "./MobileMenu";
+import { motionTransition } from "@/lib/animations";
 
 const navItems = [
   { label: "Home", href: "/", icon: HomeOutlinedIcon },
@@ -31,75 +32,73 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
-      <header className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 
-          ${isScrolled
-          ? "border-b border-white/10 bg-black/40 shadow-lg backdrop-blur-2xl"
-          : "bg-white/5 backdrop-blur-md"
-        }`}>
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{
+          backgroundColor: "#000000",
+          borderBottom: isScrolled ? "1px solid rgba(255,255,255,0.16)" : "1px solid rgba(255,255,255,0.10)",
+          color: "#ffffff",
+        }}
+      >
+        <Toolbar sx={{ mx: "auto", width: "100%", maxWidth: 1200, minHeight: "72px !important" }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1.2, flexGrow: 1 }}>
+            <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <Image src="/logo final.png" alt="Pixel Bridge logo" width={34} height={34} />
+              <Typography sx={{ fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.01em", color: "#ffffff" }}>
+                Pixel Bridge
+              </Typography>
+            </Link>
+          </Box>
 
-          <Link href="/" className="flex items-center gap-2 text-base font-semibold tracking-wide text-white">
-            <div className="flex items-center h-10 w-10 justify-center">
-              <img src="/logo final.png" className="h-full w-full object-contain" alt="Pixel Bridge logo" />
-            </div>
-            <span className="text-lg font-semibold tracking-wide text-white">Pixel Bridge</span>
-          </Link>
-
-          <nav className="hidden items-center gap-1.5 md:flex">
+          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 0.5 }}>
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
-
+              const active = pathname === item.href;
               return (
-                <Link key={item.label} href={item.href} className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-all duration-300
-                  ${isActive ? "text-white" : "text-white/70 hover:text-white"}`}>
-
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`nav-link-underline${active ? " active" : ""}`}
+                  style={{
+                    padding: "8px 12px",
+                    borderRadius: 999,
+                    fontSize: "0.9rem",
+                    fontWeight: 600,
+                    color: active ? "#ffffff" : "#d1d5db",
+                    border: "1px solid transparent",
+                    transition: motionTransition.navUnderline,
+                  }}
+                >
                   {item.label}
-                  <span
-                    className={`absolute inset-x-2 -bottom-1 h-0.75 rounded-full bg-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isActive
-                      ? "scale-x-100 opacity-100"
-                      : "scale-x-0 opacity-0"
-                      }`}
-                  />
                 </Link>
               );
             })}
-          </nav>
+          </Box>
 
-          <button
-            type="button"
+          <IconButton
             aria-label="Open mobile menu"
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
             onClick={() => setMobileOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 md:hidden"
+            sx={{
+              display: { xs: "inline-flex", md: "none" },
+              ml: 0.5,
+              border: "1px solid rgba(255,255,255,0.28)",
+              color: "#ffffff",
+            }}
           >
-            <MenuIcon sx={{ fontSize: 20 }} />
-          </button>
-        </div>
-      </header>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
 
-      <MobileMenu
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-        navItems={navItems}
-      />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} navItems={navItems} />
     </>
   );
 }
-
-

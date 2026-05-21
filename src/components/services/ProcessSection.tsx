@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Grid, Paper, Typography } from "@mui/material";
+import { motionTokens, motionTransition } from "@/lib/animations";
 
 type ProcessStep = {
   title: string;
@@ -28,7 +29,7 @@ const steps: ProcessStep[] = [
 
 export default function ProcessSection() {
   return (
-    <Box className="section-padding" sx={{ px: 2 }}>
+    <Box className="section-padding reveal" sx={{ px: 2 }}>
       <Box sx={{ maxWidth: 1200, mx: "auto" }}>
         <Box sx={{ textAlign: "center", mb: { xs: 5, md: 7 } }}>
           <Typography
@@ -58,7 +59,7 @@ export default function ProcessSection() {
 
         <Grid container spacing={3}>
           {steps.map((step, index) => (
-            <Grid key={step.title} size={{ xs: 12, sm: 6, lg: 3 }}>
+            <Grid key={step.title} size={{ xs: 12, sm: 6, lg: 3 }} sx={{ position: "relative" }}>
               <Paper
                 elevation={0}
                 sx={{
@@ -68,8 +69,9 @@ export default function ProcessSection() {
                   height: "100%",
                   backgroundColor: "var(--pb-white)",
                   textAlign: "left",
+                  transition: motionTransition.card,
                   "&:hover": {
-                    transform: "translateY(-4px)",
+                    transform: `translateY(-${motionTokens.distance.hoverY}px)`,
                     boxShadow: "0 14px 24px rgba(17, 17, 17, 0.08)",
                   },
                 }}
@@ -93,6 +95,19 @@ export default function ProcessSection() {
                   {step.desc}
                 </Typography>
               </Paper>
+              {index < steps.length - 1 && (
+                <Box
+                  aria-hidden
+                  sx={{
+                    display: { xs: "none", lg: "block" },
+                    position: "absolute",
+                    top: "50%",
+                    right: -16,
+                    width: 32,
+                    borderTop: "2px dashed rgba(17,17,17,0.25)",
+                  }}
+                />
+              )}
             </Grid>
           ))}
         </Grid>

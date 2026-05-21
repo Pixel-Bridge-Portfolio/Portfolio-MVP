@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import { Box } from "@mui/material";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -9,12 +9,12 @@ interface AppShellProps {
 
 export default function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
+    <Box sx={{ minHeight: "100vh", backgroundColor: "#ffffff", color: "#111111" }}>
       <Navbar />
-
-      <main className="pt-16">{children}</main>
-
+      <Box component="main" sx={{ pt: "72px" }}>
+        {children}
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }
