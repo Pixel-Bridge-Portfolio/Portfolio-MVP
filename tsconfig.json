@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/components/work/FilterBar.j", "src/components/work/FilterBar.jsx", "src/components/work/ProjectsCard.jsx"  ],
   "exclude": ["node_modules"]
 }
