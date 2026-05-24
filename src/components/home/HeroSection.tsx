@@ -70,7 +70,7 @@ export default function HeroSection() {
 
           <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             <Button
-              href="/projects"
+              href="/work"
               variant="contained"
               size="large"
               sx={{
