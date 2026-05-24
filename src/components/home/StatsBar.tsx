@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 
 const stats = [
