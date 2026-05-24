@@ -87,6 +87,25 @@ export default function HeroSection() {
               View Work
             </Button>
 
+
+            <Button
+              href="/testimonials"
+              variant="contained"
+              size="large"
+              sx={{
+                backgroundColor: "#000",
+                color: "#fff",
+                px: 4,
+                py: 1.5,
+                borderRadius: "999px",
+                "&:hover": {
+                  backgroundColor: "#222",
+                },
+              }}
+            >
+               View Testimonials
+            </Button>
+
             <Button
               href="/contact"
               variant="outlined"
