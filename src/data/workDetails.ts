@@ -61,7 +61,7 @@ export const workDetails: WorkProject[] = [
       "We designed a complete branding system in Adobe Illustrator with refined typography, luxury-inspired layouts, and polished visual elements.",
 
     result:
-      "The final branding created a strong and memorable identity that elevated the watch brand’s premium presence.",
+      "The final branding created a strong and memorable identity that elevated the watch brand's premium presence.",
 
     stack: ["Adobe Illustrator", "Brand Identity", "Logo Design"],
 
@@ -99,7 +99,7 @@ export const workDetails: WorkProject[] = [
     year: "2026",
     coverImage: "/sites/img1.JPG",
 
-    categories: ["frontend", "design"],
+    categories: ["frontend", "design", "comms"],
 
     heroMedia: {
       type: "video",
@@ -114,7 +114,7 @@ export const workDetails: WorkProject[] = [
       "We developed a clean and responsive restaurant website using HTML and Bootstrap with modern sections and smooth layouts.",
 
     result:
-      "The website improved the restaurant’s online presence and made browsing food items easier across devices.",
+      "The website improved the restaurant's online presence and made browsing food items easier across devices.",
 
     stack: ["HTML", "Bootstrap", "CSS", "JavaScript"],
 
@@ -152,7 +152,7 @@ export const workDetails: WorkProject[] = [
     year: "2026",
     coverImage: "/branding/img9.jpg",
 
-    categories: ["branding", "design", "social"],
+    categories: ["branding", "design", "social", "video"],
 
     heroMedia: {
       type: "image",
@@ -217,7 +217,7 @@ export const workDetails: WorkProject[] = [
       "The coffee shop needed branding that reflected its warm atmosphere and welcoming customer experience.",
 
     solution:
-      "We designed a friendly and cozy branding system with earthy tones, modern packaging concepts, and café-inspired visuals.",
+      "We designed a friendly and cozy branding system with earthy tones, modern packaging concepts, and cafe-inspired visuals.",
 
     result:
       "The branding gave the coffee shop a memorable personality and stronger visual consistency.",
@@ -258,7 +258,7 @@ export const workDetails: WorkProject[] = [
     year: "2026",
     coverImage: "/sites/img4.JPG",
 
-    categories: ["frontend", "product"],
+    categories: ["frontend", "product", "backend", "ai"],
 
     heroMedia: {
       type: "video",
@@ -300,4 +300,5 @@ export const workDetails: WorkProject[] = [
     ],
   },
 ];
+
 

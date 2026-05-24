@@ -144,8 +144,8 @@ export default function TestimonialsPage() {
               variant="h1"
               sx={{
                 fontSize: {
-                  xs: "2.8rem",
-                  sm: "4rem",
+                  xs: "2.1rem",
+                  sm: "3rem",
                   md: "5rem",
                 },
                 fontWeight: 800,
@@ -192,7 +192,7 @@ export default function TestimonialsPage() {
               border: "1px solid #eaeaea",
               borderRadius: "32px",
               p: {
-                xs: 4,
+                xs: 2.5,
                 md: 8,
               },
               backgroundColor: "#ffffff",
@@ -223,14 +223,15 @@ export default function TestimonialsPage() {
               <Typography
                 sx={{
                   fontSize: {
-                    xs: "1.2rem",
+                    xs: "1rem",
+                    sm: "1.2rem",
                     md: "1.7rem",
                   },
                   lineHeight: 1.8,
                   fontWeight: 500,
                 }}
               >
-                “{testimonials[activeIndex].quote}”
+                &ldquo;{testimonials[activeIndex].quote}&rdquo;
               </Typography>
 
               <Box>
@@ -254,7 +255,7 @@ export default function TestimonialsPage() {
 
               {/* Controls */}
               <Stack
-                direction="row"
+                direction={{ xs: "column", sm: "row" }}
                 spacing={2}
                 sx={{
                   alignItems: "center",

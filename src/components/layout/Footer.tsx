@@ -49,7 +49,7 @@ export default function Footer() {
         >
           <Box sx={{ maxWidth: 520 }}>
             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-              <Image src="/logo final.png" alt="Pixel Bridge logo" width={36} height={36} />
+              <Image src="/icon.png" alt="Pixel Bridge logo" width={36} height={36} />
               <Typography sx={{ fontWeight: 700, fontSize: "1.05rem", color: "#ffffff" }}>
                 Pixel Bridge
               </Typography>

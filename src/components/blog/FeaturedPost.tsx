@@ -77,7 +77,7 @@ export default function FeaturedPost({
           }}
         >
           <Chip
-            label={`Featured • ${category}`}
+            label={`Featured - ${category}`}
             color="primary"
             sx={{
               width: "fit-content",
@@ -89,6 +89,7 @@ export default function FeaturedPost({
   sx={{
     lineHeight: 1.1,
     maxWidth: 520,
+    fontSize: { xs: "1.65rem", sm: "2rem", md: "2.75rem" },
   }}
 >
             {title}
@@ -102,7 +103,7 @@ export default function FeaturedPost({
           </Typography>
 
           <Stack
-            direction="row"
+            direction={{ xs: "column", sm: "row" }}
             spacing={1}
             sx={{ alignItems: "center" }}
           >
@@ -117,7 +118,7 @@ export default function FeaturedPost({
               variant="caption"
               className="text-muted"
             >
-              •
+              -
             </Typography>
 
             <Typography

@@ -52,7 +52,7 @@ export default function Navbar() {
         <Toolbar sx={{ mx: "auto", width: "100%", maxWidth: 1200, minHeight: "72px !important" }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1.2, flexGrow: 1 }}>
             <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <Image src="/logo final.png" alt="Pixel Bridge logo" width={34} height={34} />
+              <Image src="/icon.png" alt="Pixel Bridge logo" width={34} height={34} />
               <Typography sx={{ fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.01em", color: "#ffffff" }}>
                 Pixel Bridge
               </Typography>

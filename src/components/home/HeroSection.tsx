@@ -46,7 +46,7 @@ export default function HeroSection() {
           <Typography
             variant="h1"
             sx={{
-              fontSize: { xs: "3rem", md: "5.5rem" },
+              fontSize: { xs: "2.2rem", sm: "3rem", md: "5.5rem" },
               fontWeight: 800,
               lineHeight: 1,
               color: "#000",
@@ -68,7 +68,7 @@ export default function HeroSection() {
             and elegant interactions for ambitious brands.
           </Typography>
 
-          <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ width: { xs: "100%", sm: "auto" } }}>
             <Button
               href="/work"
               variant="contained"
@@ -79,6 +79,7 @@ export default function HeroSection() {
                 px: 4,
                 py: 1.5,
                 borderRadius: "999px",
+                width: { xs: "100%", sm: "auto" },
                 "&:hover": {
                   backgroundColor: "#222",
                 },
@@ -98,6 +99,7 @@ export default function HeroSection() {
                 px: 4,
                 py: 1.5,
                 borderRadius: "999px",
+                width: { xs: "100%", sm: "auto" },
                 "&:hover": {
                   backgroundColor: "#222",
                 },
@@ -116,6 +118,7 @@ export default function HeroSection() {
                 px: 4,
                 py: 1.5,
                 borderRadius: "999px",
+                width: { xs: "100%", sm: "auto" },
                 "&:hover": {
                   borderColor: "#000",
                   backgroundColor: "#f5f5f5",
