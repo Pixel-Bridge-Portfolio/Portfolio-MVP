@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { WorkProject } from "@/data/workDetails";
 
 export default function ProjectNarrative({
@@ -31,21 +32,43 @@ export default function ProjectNarrative({
   return (
     <section className="bg-white px-6 py-24 md:px-10">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.9fr_1fr]">
-        <div className="relative">
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <div className="sticky top-16">
             <div className="relative">
               <div className="absolute left-5.75 top-0 h-full w-px bg-black/10" />
 
               <div className="space-y-24">
                 {blocks.map((block, index) => (
-                  <div
+                  <motion.div
                     key={block.title}
                     className="relative flex gap-10"
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.15,
+                    }}
+                    viewport={{ once: true }}
                   >
                     <div className="relative flex w-12 justify-center">
-                      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-black text-sm font-semibold text-white shadow-[0_0_30px_rgba(0,0,0,0.15)]">
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: index * 0.15,
+                        }}
+                        viewport={{ once: true }}
+                        className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-black text-sm font-semibold text-white"
+                      >
                         {index + 1}
-                      </div>
+                      </motion.div>
 
                       {index === blocks.length - 1 && (
                         <div className="absolute top-12 h-32 w-px bg-linear-to-b from-black/20 to-transparent" />
@@ -53,70 +76,137 @@ export default function ProjectNarrative({
                     </div>
 
                     <div className="flex-1 pb-8">
-                      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-black/40">
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0.1 + index * 0.15,
+                        }}
+                        viewport={{ once: true }}
+                        className="text-sm font-semibold uppercase tracking-[0.3em] text-black/40"
+                      >
                         {block.number}
-                      </p>
+                      </motion.p>
 
-                      <h2 className="mt-4 text-3xl font-bold tracking-tight text-black md:text-[2.2rem]">
+                      <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 0.15 + index * 0.15,
+                        }}
+                        viewport={{ once: true }}
+                        className="mt-4 text-3xl font-bold tracking-tight text-black md:text-[2.2rem]"
+                      >
                         {block.title}
-                      </h2>
+                      </motion.h2>
 
-                      <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 0.25 + index * 0.15,
+                        }}
+                        viewport={{ once: true }}
+                        className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600"
+                      >
                         {block.text}
-                      </p>
+                      </motion.p>
 
-                      <div className="mt-8 flex flex-wrap gap-3">
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 0.35 + index * 0.15,
+                        }}
+                        viewport={{ once: true }}
+                        className="mt-8 flex flex-wrap gap-3"
+                      >
                         {block.tags.map((tag) => (
-                          <span
+                          <motion.span
                             key={tag}
+                            whileHover={{ y: -3 }}
+                            transition={{ duration: 0.2 }}
                             className="rounded-full bg-black/5 px-4 py-2 text-sm font-medium text-black"
                           >
                             {tag}
-                          </span>
+                          </motion.span>
                         ))}
-                      </div>
+                      </motion.div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="lg:pl-4">
+        <motion.div
+          className="lg:pl-4"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="mb-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-black/40">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-black/40"
+            >
               Gallery
-            </p>
+            </motion.p>
 
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-black">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-3 text-3xl font-bold tracking-tight text-black"
+            >
               Visual Showcase
-            </h2>
+            </motion.h2>
           </div>
 
           <div className="space-y-6">
             {project.gallery.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="mx-auto max-w-140 overflow-hidden rounded-[18px] bg-neutral-100 shadow-sm"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                className="mx-auto max-w-140 overflow-hidden rounded-[18px] bg-neutral-100"
               >
                 {item.type === "image" ? (
-                  <img
+                  <motion.img
                     src={item.src}
                     alt={`${project.title} gallery ${index + 1}`}
-                    className="h-auto w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                    className="h-auto w-full object-cover"
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.6 }}
                   />
                 ) : (
-                  <video
+                  <motion.video
                     src={item.src}
                     controls
                     className="h-auto w-full object-cover"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.6 }}
                   />
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
