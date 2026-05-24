@@ -128,7 +128,7 @@ export default function ContactPage() {
                   <EmailOutlinedIcon sx={{ color: "text.secondary", mt: 0.2 }} />
                   <Box>
                     <Typography sx={{ fontWeight: 700, mb: 0.4 }}>Email</Typography>
-                    <Typography className="text-muted">partnerships@northforge-labs.test</Typography>
+                    <Typography className="text-muted">hello@pixelbridge.studio</Typography>
                   </Box>
                 </Box>
 
@@ -137,16 +137,16 @@ export default function ContactPage() {
                   <Box sx={{ width: "100%" }}>
                     <Typography sx={{ fontWeight: 700, mb: 0.6 }}>Social</Typography>
                     <Stack direction="row" spacing={1}>
-                      <IconButton component="a" href="https://x.com/northforge_labs" target="_blank" rel="noreferrer" aria-label="X">
+                      <IconButton component="a" href="https://x.com/pixelbridge" target="_blank" rel="noreferrer" aria-label="X">
                         <XIcon />
                       </IconButton>
-                      <IconButton component="a" href="https://instagram.com/northforge.labs" target="_blank" rel="noreferrer" aria-label="Instagram">
+                      <IconButton component="a" href="https://instagram.com/pixelbridge.studio" target="_blank" rel="noreferrer" aria-label="Instagram">
                         <InstagramIcon />
                       </IconButton>
-                      <IconButton component="a" href="https://linkedin.com/company/northforge-labs" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                      <IconButton component="a" href="https://linkedin.com/company/pixelbridge" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                         <LinkedInIcon />
                       </IconButton>
-                      <IconButton component="a" href="https://github.com/northforge-labs" target="_blank" rel="noreferrer" aria-label="GitHub">
+                      <IconButton component="a" href="https://github.com/pixelbridge-studio" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <GitHubIcon />
                       </IconButton>
                     </Stack>

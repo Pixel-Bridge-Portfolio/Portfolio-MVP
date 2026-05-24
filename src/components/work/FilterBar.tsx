@@ -4,6 +4,8 @@ const filters = [
   "frontend",
   "design",
   "branding",
+  "video",
+  "comms",
   "social",
   "ai",
   "product",

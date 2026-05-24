@@ -1,4 +1,4 @@
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import { WorkProject } from "@/data/workDetails";
 
 export default function ProjectTestimonial({
@@ -7,7 +7,7 @@ export default function ProjectTestimonial({
   project: WorkProject;
 }) {
   return (
-    <section className="relative overflow-hidden rounded-[36px] border border-white/10 bg-black px-8 py-14 text-white md:px-14">
+    <section className="relative overflow-hidden rounded-[24px] border border-white/10 bg-black px-5 py-10 text-white sm:px-8 md:rounded-[36px] md:px-14 md:py-14">
       <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
 
       <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-neutral-700/20 blur-3xl" />
@@ -27,17 +27,17 @@ export default function ProjectTestimonial({
           </div>
         </div>
 
-        <blockquote className="mt-10 max-w-5xl text-3xl font-medium leading-[1.4] tracking-tight text-white md:text-5xl">
-          “{project.testimonial.quote}”
+        <blockquote className="mt-8 max-w-5xl text-xl font-medium leading-[1.45] tracking-tight text-white sm:text-2xl md:mt-10 md:text-5xl">
+          &ldquo;{project.testimonial.quote}&rdquo;
         </blockquote>
 
-        <div className="mt-12 flex items-center gap-5">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-xl font-bold text-black shadow-2xl">
+        <div className="mt-9 flex items-center gap-4 md:mt-12 md:gap-5">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-base font-bold text-black shadow-2xl md:h-16 md:w-16 md:text-xl">
             {project.testimonial.author.charAt(0)}
           </div>
 
           <div>
-            <p className="text-xl font-semibold text-white">
+            <p className="text-base font-semibold text-white md:text-xl">
               {project.testimonial.author}
             </p>
 

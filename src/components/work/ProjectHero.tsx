@@ -8,7 +8,7 @@ export default function ProjectHero({
   project: WorkProject;
 }) {
   return (
-   <section className="relative h-[91vh] overflow-hidden bg-black">
+   <section className="relative min-h-[74vh] overflow-hidden bg-black md:min-h-[85vh]">
   <div className="absolute inset-0">
     {project.heroMedia.type === "image" ? (
       <>
@@ -68,24 +68,24 @@ export default function ProjectHero({
   </div>
 
   <div className="relative z-10 flex h-full items-end">
-    <div className="w-full px-6 pb-25 md:px-10 md:pb-36">
+    <div className="w-full px-4 pb-16 sm:px-6 md:px-10 md:pb-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-wrap gap-3">
           {[project.client, project.industry, project.year].map((item) => (
             <span
               key={item}
-              className="rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/20"
+              className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/20 sm:px-5 sm:py-2 sm:text-sm"
             >
               {item}
             </span>
           ))}
         </div>
 
-        <h1 className="max-w-6xl text-5xl font-black leading-[0.9] tracking-tight text-white md:text-7xl xl:text-8xl">
+        <h1 className="max-w-6xl text-3xl font-black leading-[0.95] tracking-tight text-white sm:text-5xl md:text-7xl xl:text-8xl">
           {project.title}
         </h1>
 
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-300 md:text-lg">
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-neutral-300 sm:text-base md:text-lg">
           {project.shortDescription}
         </p>
       </div>

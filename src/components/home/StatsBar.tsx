@@ -3,10 +3,10 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 
 const stats = [
-  { label: "Projects", value: "120+" },
-  { label: "Clients", value: "40+" },
-  { label: "Years", value: "6" },
-  { label: "Disciplines", value: "12" },
+  { label: "Projects Delivered", value: "50+" },
+  { label: "Disciplines", value: "9" },
+  { label: "Years", value: "3+" },
+  { label: "Clients", value: "20+" },
 ];
 
 export default function StatsBar() {

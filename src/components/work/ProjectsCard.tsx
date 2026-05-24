@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 import { WorkProject } from "@/data/workDetails";
 
@@ -58,7 +58,7 @@ export default function ProjectsCard({ project }: Props) {
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
             >
               See Details
-              <ArrowUpRight size={16} />
+              <ArrowOutwardIcon sx={{ fontSize: 16 }} />
             </Link>
           </div>
         </div>

@@ -21,9 +21,9 @@ export default function TeamPage() {
     useState<TeamMember | null>(null);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-white px-6 pb-24 pt-15 text-black">
+    <main className="min-h-screen overflow-hidden bg-white px-4 pb-16 pt-8 text-black sm:px-6 md:pb-24 md:pt-12">
       <div className="mx-auto max-w-7xl">
-        <section className="relative overflow-hidden rounded-4xl bg-white px-6 py-5 text-black md:px-14 md:py-10">
+        <section className="relative overflow-hidden rounded-3xl bg-white px-4 py-6 text-black sm:px-6 md:rounded-4xl md:px-14 md:py-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_30%)]" />
 
           <div className="relative max-w-3xl">
@@ -32,7 +32,7 @@ export default function TeamPage() {
               Meet Our Team
             </div>
 
-            <h1 className="text-4xl font-black leading-tight md:text-7xl">
+            <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-7xl">
               Creative minds building meaningful digital experiences.
             </h1>
 
@@ -55,7 +55,7 @@ export default function TeamPage() {
           </div>
         </section>
 
-        <section className="mt-20">
+        <section className="mt-14 md:mt-20">
           <div className="mb-10">
             <h2 className="text-3xl font-black text-black md:text-5xl">
               Team Members
@@ -77,17 +77,17 @@ export default function TeamPage() {
           </div>
         </section>
 
-        <section className="mt-24">
-          <div className="relative overflow-hidden rounded-4xl border border-black/10 bg-black px-8 py-16 text-white md:px-16">
+        <section className="mt-16 md:mt-24">
+          <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-black px-5 py-10 text-white sm:px-8 md:rounded-4xl md:px-16 md:py-16">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
 
             <div className="relative flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
               <div className="max-w-2xl">
-                <h2 className="text-4xl font-black md:text-6xl">
+                <h2 className="text-3xl font-black md:text-6xl">
                   Have a project in mind?
                 </h2>
 
-                <p className="mt-5 text-lg leading-8 text-white/70">
+                <p className="mt-4 text-base leading-7 text-white/70 md:mt-5 md:text-lg md:leading-8">
                   Let’s collaborate and turn your ideas into a powerful digital
                   experience.
                 </p>

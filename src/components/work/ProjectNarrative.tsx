@@ -30,8 +30,8 @@ export default function ProjectNarrative({
   ];
 
   return (
-    <section className="bg-white px-6 py-24 md:px-10">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.9fr_1fr]">
+    <section className="bg-white px-4 py-14 sm:px-6 md:px-10 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 md:gap-14 lg:grid-cols-[0.9fr_1fr]">
         <motion.div
           className="relative"
           initial={{ opacity: 0, y: 40 }}
@@ -39,15 +39,15 @@ export default function ProjectNarrative({
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <div className="sticky top-16">
+          <div className="sticky top-12">
             <div className="relative">
-              <div className="absolute left-5.75 top-0 h-full w-px bg-black/10" />
+              <div className="absolute left-6 top-0 h-full w-px bg-black/10" />
 
-              <div className="space-y-24">
+              <div className="space-y-14 md:space-y-24">
                 {blocks.map((block, index) => (
                   <motion.div
                     key={block.title}
-                    className="relative flex gap-10"
+                    className="relative flex gap-5 md:gap-10"
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
@@ -97,7 +97,7 @@ export default function ProjectNarrative({
                           delay: 0.15 + index * 0.15,
                         }}
                         viewport={{ once: true }}
-                        className="mt-4 text-3xl font-bold tracking-tight text-black md:text-[2.2rem]"
+                        className="mt-4 text-2xl font-bold tracking-tight text-black md:text-[2.2rem]"
                       >
                         {block.title}
                       </motion.h2>
@@ -110,7 +110,7 @@ export default function ProjectNarrative({
                           delay: 0.25 + index * 0.15,
                         }}
                         viewport={{ once: true }}
-                        className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600"
+                        className="mt-5 max-w-xl text-base leading-relaxed text-neutral-600 md:mt-6 md:text-lg"
                       >
                         {block.text}
                       </motion.p>
@@ -167,7 +167,7 @@ export default function ProjectNarrative({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-3 text-3xl font-bold tracking-tight text-black"
+              className="mt-3 text-2xl font-bold tracking-tight text-black md:text-3xl"
             >
               Visual Showcase
             </motion.h2>

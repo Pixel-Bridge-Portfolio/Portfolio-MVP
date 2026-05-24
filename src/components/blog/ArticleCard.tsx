@@ -63,7 +63,7 @@ export default function ArticleCard({
             </Typography>
 
             <Typography variant="caption" className="text-muted">
-              •
+              -
             </Typography>
 
             <Typography variant="caption" className="text-muted">
@@ -75,6 +75,7 @@ export default function ArticleCard({
   variant="h4"
   sx={{
     lineHeight: 1.2,
+    fontSize: { xs: "1.25rem", sm: "1.5rem", md: "2rem" },
   }}
 >
             {title}
