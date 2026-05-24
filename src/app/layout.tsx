@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Pixel Bridge",
   description: "Pixel Bridge Portfolio MVP",
   icons: {
-    icon: "/logo-final.png",
-    shortcut: "/logo-final.png",
-    apple: "/logo-final.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
