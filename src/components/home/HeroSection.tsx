@@ -1,6 +1,3 @@
-
-"use client";
-
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 
 export default function HeroSection() {
