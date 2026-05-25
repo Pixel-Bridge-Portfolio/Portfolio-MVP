@@ -28,9 +28,19 @@ export default function ProjectsCard({ project }: Props) {
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
 
-        <div className="absolute inset-0 bg-black/55 opacity-0 transition duration-300 group-hover:opacity-100" />
+        {/* Touch devices (mobile/tablet): always-visible CTA (no hover). */}
+        <Link
+          href={`/work/${project.slug}/`}
+          className="work-card-cta absolute bottom-4 left-4 z-10 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/90 px-4 py-2.5 text-sm font-semibold text-black shadow-lg backdrop-blur-md transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          See Details
+          <ArrowOutwardIcon sx={{ fontSize: 16 }} />
+        </Link>
 
-        <div className="absolute inset-0 flex items-end p-5 opacity-0 transition duration-300 group-hover:opacity-100">
+        <div className="work-card-overlay-bg absolute inset-0 bg-black/55 opacity-0 transition duration-300" />
+
+        {/* Hover-capable devices: richer overlay on hover. */}
+        <div className="work-card-overlay-content absolute inset-0 hidden items-end p-5 opacity-0 transition duration-300">
           <div className="w-full space-y-4">
             <div>
               <div className="mb-3 flex flex-wrap gap-2">
@@ -54,7 +64,7 @@ export default function ProjectsCard({ project }: Props) {
             </div>
 
             <Link
-              href={`/work/${project.slug}`}
+              href={`/work/${project.slug}/`}
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
             >
               See Details
