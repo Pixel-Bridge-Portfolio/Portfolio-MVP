@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { featuredProjects } from "@/data/featuredProjects";
 import { Box, Button, Card, CardContent, Chip, Container, Grid, Stack, Typography } from "@mui/material";
 
@@ -69,7 +71,12 @@ export default function FeaturedWorkGrid() {
                     </Box>
 
                     <Box>
-                      <Button href={project.link} variant="text" sx={{ px: 0, fontWeight: 600 }}>
+                      <Button
+                        component={Link}
+                        href={project.link}
+                        variant="text"
+                        sx={{ px: 0, fontWeight: 600 }}
+                      >
                         View Case Study
                       </Button>
                     </Box>
