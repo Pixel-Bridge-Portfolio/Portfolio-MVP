@@ -51,7 +51,8 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial,
+    Helvetica, sans-serif;
 }
 
 /* Typography helpers */
@@ -162,5 +163,37 @@ a {
   50% {
     transform: translateY(-1px);
     box-shadow: 0 10px 20px rgba(17, 17, 17, 0.22);
+  }
+}
+
+/* Work cards: use real media queries for touch vs hover devices */
+.work-card-cta {
+  display: inline-flex;
+}
+
+.work-card-overlay-bg {
+  opacity: 0;
+}
+
+.work-card-overlay-content {
+  display: none;
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-card-cta {
+    display: none;
+  }
+
+  .work-card-overlay-content {
+    display: flex;
+  }
+
+  .group:hover .work-card-overlay-bg {
+    opacity: 1;
+  }
+
+  .group:hover .work-card-overlay-content {
+    opacity: 1;
   }
 }
